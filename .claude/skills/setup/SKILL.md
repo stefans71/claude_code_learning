@@ -33,32 +33,45 @@ This means **running /setup again after an interruption always works.**
 
 ## The interview
 
-Ask these questions one at a time. Wait for answers. Adapt.
+Present all questions together so the learner can answer in one message.
+Use lettered options for quick typing. Format like this:
 
-1. "What's your experience with Claude Code?"
-   - Never used it → beginner path
-   - Used it casually → intermediate path  
-   - Power user → advanced path
+```
+A few questions before I set things up:
 
-2. "Have you configured any of these before: CLAUDE.md, custom skills,
-    hooks, agents, MCP servers?"
-   - Their answer tells you which lessons to prioritize
+1. What's your experience with Claude Code?
+   a) Never used it
+   b) Used it casually
+   c) Power user
 
-3. "Want me to explain what I'm building as I go? (This is the first
-    teaching moment — you'll watch me use the features I'm about to
-    teach you.)"
-   - Yes → narrate every file creation as a mini-lesson
-   - No → build quietly, explain at the end
+2. Have you configured any of these before?
+   CLAUDE.md, custom skills, hooks, agents, or MCP servers
+   a) None of these
+   b) Some of these (tell me which)
+   c) All of these
 
-4. "During lessons, I can fetch the latest Anthropic docs from
-    code.claude.com to make sure everything is current. This uses
-    internet access. Fine to skip — lessons still work without it.
-    Want me to fetch docs during lessons?"
-   - Yes → note preference in .claude-progress.json ("fetch_docs": true).
-     Lessons will fetch docs automatically — no further prompts.
-   - No → note preference ("fetch_docs": false). Lessons use training
-     knowledge + reference links. You can change this later by editing
-     .claude-progress.json.
+3. Want me to explain what I'm building as I go?
+   a) Yes — narrate as you build
+   b) No — build it, explain at the end
+
+4. Fetch latest docs from code.claude.com during lessons?
+   a) Yes
+   b) No — offline is fine
+
+Example answer: 1b, 2a, 3a, 4a
+```
+
+Wait for their answers. Then map them:
+
+- Q1: a → beginner path, b → intermediate path, c → advanced path
+- Q2: Their answer tells you which lessons to prioritize
+- Q3: a → narrate every file creation as a mini-lesson,
+      b → build quietly, explain at the end
+- Q4: a → note preference in .claude-progress.json ("fetch_docs": true).
+      Lessons will fetch docs automatically — no further prompts.
+      b → note preference ("fetch_docs": false). Lessons use training
+      knowledge + reference links. You can change this later by editing
+      .claude-progress.json.
 
 ## What you build
 
