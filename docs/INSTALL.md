@@ -62,14 +62,15 @@ Then create the learning environment using the answers from step 1. Follow the s
 Use the level mapping from step 1 (1a → beginner, 1b → intermediate, 1c → advanced).
 Use Q3 for narration preference, Q4 for fetch_docs preference.
 
-**Permissions note:** When you create files in `.claude/`, the user may see a
-permissions prompt asking to allow access to `.claude/`. Before creating any
-files, tell the user:
+**Permissions note:** The repo ships with `.claude/settings.json` containing
+pre-approved write permissions for setup paths. File writes should NOT prompt
+the user. If a permissions prompt does appear, tell the user to select
+"Yes, and always allow access to .claude/ from this project."
 
-> You'll see a permissions prompt for the .claude/ directory. Select
-> **"Yes, and always allow access to .claude/ from this project"** —
-> this tutorial creates settings, hooks, and agents there throughout
-> the lessons.
+**IMPORTANT:** The repo's `.claude/settings.json` already has a `permissions`
+block. When adding hooks, **merge into the existing file** — do NOT overwrite
+the permissions. Read the file first, then write back with both `permissions`
+and `hooks` keys.
 
 Create these files based on level:
 - `.claude/settings.json` (everyone)

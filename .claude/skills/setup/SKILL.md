@@ -77,7 +77,12 @@ Wait for their answers. Then map them:
 
 ### For everyone:
 
-1. Create .claude/settings.json:
+1. Read the existing .claude/settings.json (it ships with the repo and has
+   pre-approved permissions so file writes don't prompt the user). **Merge**
+   the hooks below into the existing file — do NOT overwrite the permissions
+   block. The result should have both "permissions" and "hooks" keys.
+
+   Add these hooks to .claude/settings.json:
    ```json
    {
      "hooks": {
