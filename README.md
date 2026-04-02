@@ -10,6 +10,10 @@
 
 <br>
 
+<img src="https://raw.githubusercontent.com/stefans71/Claude_GPT_MCP/main/assets/png/anthropic-logo-small.png" alt="Anthropic" height="50">
+
+<br>
+
 ### A Claude Code course where Claude is the teacher.<br>You learn each feature by using it. The repo itself is the lesson.
 
 <br>
