@@ -191,28 +191,22 @@ Tell the learner:
 - That everything you just did IS lessons 02-05
 - That the hooks are already active — they'll see explanations before every action
 
-Then present the next step as lettered options:
+Then run a quick test automatically — create test.md with "hello world".
+The learner will see their new setup in action (the PreToolUse hook explains
+the write before it happens). After creating the file, clean up by deleting
+test.md.
+
+Then show next steps:
 
 ```
-What next?
+Setup complete. Here's what to do next:
 
-a) Quick test — I'll create a file so you can see your new setup in action
-b) Start learning — jump straight into the first lesson
-c) See all commands — type "/" in the prompt to browse what's available
+a) Start learning — type /lesson 01-CLAUDE-md
+b) See your progress — type /progress
+c) See all commands — type "/" in the prompt area
 
-Tip: Type "/" in the prompt area at any time to see all commands.
+Tip: Type "/" at any time to browse available commands.
 ```
-
-Wait for their answer.
-
-- a → Do the hook verification: create test.md with "hello world", confirm
-  the PreToolUse hook fired (it explains the Write action before performing
-  it), then clean up by deleting test.md. After verification, say:
-  "Hooks are working. Type `/lesson 01-CLAUDE-md` to start."
-- b → Tell them: "Type `/lesson 01-CLAUDE-md` to start. That `/` is a slash
-  command — you'll learn how they work in lesson 03."
-- c → List all available slash commands from the repo, then ask if they
-  want to start lesson 01.
 
 ## Rules
 - Do NOT use shell injection (!backtick syntax)
