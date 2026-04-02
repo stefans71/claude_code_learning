@@ -66,10 +66,29 @@ Example answer: 1b, 2a, 3a, 4a
 
 Wait for their answers. Then map them:
 
-- Q1: a → beginner path, b → intermediate path, c → advanced path
-- Q2: Their answer tells you which lessons to prioritize
+- Q1: a → beginner, b → intermediate, c → advanced
+- Q2: Their answer tells you which concepts to explain more carefully
 - Q3: a → narrate every file creation as a mini-lesson,
       b → build quietly, explain at the end
+
+**After the main questions, if Q1 is b or c (intermediate/advanced),
+show a lesson picker so they can skip basics they already know:**
+
+```
+All 7 lessons are available. The first 4 cover fundamentals.
+Want to skip any?
+
+a) [X] 01-CLAUDE-md — project instructions that shape Claude's behavior
+b) [X] 02-settings — permissions, model config, settings.json
+c) [X] 03-skills — slash commands you can build yourself
+d) [X] 04-hooks — automated actions on every edit
+
+Type the letters to UNCHECK (e.g. "a c" to skip those two),
+or type "all" to skip all basics, or "none" to keep them all.
+```
+
+Save their choices in .claude-progress.json under "skipped": [...].
+Beginners (Q1=a) skip this step — they get all lessons.
 - Q4: a → note preference in .claude-progress.json ("fetch_docs": true).
       Lessons will fetch docs automatically — no further prompts.
       b → note preference ("fetch_docs": false). Lessons use training
