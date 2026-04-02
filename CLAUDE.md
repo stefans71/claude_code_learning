@@ -7,6 +7,12 @@ Claude Code features by BEING an example of them.
 A set of skill files and lesson content. No code. No scripts. No executables.
 Claude Code is the installer, the runtime, and the operator.
 
+## Auto-setup on first open
+When this repo is first opened and .claude-progress.json does NOT exist,
+automatically run /setup. Do not wait for the user to type it — just start
+the setup interview immediately. This makes the Getting Started experience
+seamless: clone, open Claude Code, and setup begins.
+
 ## Available commands
 - /setup — Run this first. I'll interview you and build your learning environment.
 - /lesson [topic] — Start a guided lesson (e.g., /lesson 01-CLAUDE-md)

@@ -5,7 +5,6 @@ description: Set up your claude-code-learn environment. Run /setup when you
   and preferences, then builds a personalized learning environment.
 allowed-tools: Read, Write, Glob
 user-invocable: true
-disable-model-invocation: true
 ---
 
 ## What you are

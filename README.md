@@ -115,11 +115,7 @@ cd Claude_Code_Learning
 
 Open it in VS Code with the [Claude Code extension](https://marketplace.visualstudio.com/items?itemName=anthropics.claude-code) (recommended), or run `claude` from the terminal.
 
-Then type:
-
-```
-/setup
-```
+Claude detects it's a fresh clone and starts the setup interview automatically. If it doesn't, type `/setup`.
 
 Claude takes it from there.
 
