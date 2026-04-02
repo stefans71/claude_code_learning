@@ -3,7 +3,7 @@
 <div align="center">
 
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
-![Claude Code](https://img.shields.io/badge/Claude_Code-required-orange?style=for-the-badge&logo=anthropic)
+![Claude Code](https://img.shields.io/badge/Claude_Code-required-orange?style=for-the-badge)
 ![Lessons](https://img.shields.io/badge/Lessons-7-green?style=for-the-badge)
 ![Zero Code](https://img.shields.io/badge/Zero_Code-All_Markdown-purple?style=for-the-badge)
 ![GitHub stars](https://img.shields.io/github/stars/stefans71/Claude_Code_Learning?style=for-the-badge)
@@ -204,7 +204,7 @@ No installation scripts. No configuration sprawl. No code that runs before you t
 ### Built With
 
 <p>
-  <img src="https://img.shields.io/badge/Claude_Code-Anthropic-orange?style=for-the-badge&logo=anthropic&logoColor=white" />
+  <img src="https://img.shields.io/badge/Claude_Code-Anthropic-orange?style=for-the-badge" />
 </p>
 
 ---
