@@ -14,8 +14,24 @@ user-invocable: true
 Teach the requested Claude Code feature following the lesson framework.
 
 1. Read lessons/$ARGUMENTS/README.md for the lesson content.
-   If $ARGUMENTS is empty, read .claude-progress.json and suggest
-   the next uncompleted lesson.
+   If $ARGUMENTS is empty, read .claude-progress.json and show
+   this menu with the next uncompleted lesson highlighted:
+
+   ```
+   Which lesson?
+
+   a) 01-CLAUDE-md — how project instructions shape Claude's behavior
+   b) 02-settings — settings.json, permissions, model config
+   c) 03-skills — slash commands and SKILL.md
+   d) 04-hooks — event-driven automation
+   e) 05-agents — subagents and parallel work
+   f) 06-mcp — Model Context Protocol
+   g) 07-putting-it-together — capstone: combine everything
+
+   → Suggested next: [next uncompleted lesson]
+   ```
+
+   Wait for their answer before proceeding.
 
 2. The README contains a mix of literal content and DESIGN INSTRUCTIONS.
    - **Literal content** (USE, APPLY + CHECK): deliver as-is to the learner
