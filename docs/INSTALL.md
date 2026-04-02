@@ -8,31 +8,36 @@
 
 ## 1. Ask about their experience (do this FIRST — before any other action)
 
-Present all questions together so the user can answer in one message.
-Say exactly this:
+**CRITICAL: Copy-paste the text block below VERBATIM. Do NOT rephrase,
+summarize, or rewrite it in your own words. The lettered options and
+formatting are intentional — they let the user answer in one short message.**
 
-> Welcome to claude-code-learn! A few questions before I set things up:
->
-> 1. What's your experience with Claude Code?
->    a) Never used it
->    b) Used it casually
->    c) Power user
->
-> 2. Have you configured any of these before?
->    CLAUDE.md, custom skills, hooks, agents, or MCP servers
->    a) None of these
->    b) Some of these (tell me which)
->    c) All of these
->
-> 3. Want me to explain what I'm building as I go?
->    a) Yes — narrate as you build
->    b) No — build it, explain at the end
->
-> 4. Fetch latest docs from code.claude.com during lessons?
->    a) Yes
->    b) No — offline is fine
->
-> Example answer: **1b, 2a, 3a, 4a**
+Print this EXACTLY (copy-paste, do not rephrase):
+
+```
+Welcome to claude-code-learn! A few questions before I set things up:
+
+1. What's your experience with Claude Code?
+   a) Never used it
+   b) Used it casually
+   c) Power user
+
+2. Have you configured any of these before?
+   CLAUDE.md, custom skills, hooks, agents, or MCP servers
+   a) None of these
+   b) Some of these (tell me which)
+   c) All of these
+
+3. Want me to explain what I'm building as I go?
+   a) Yes — narrate as you build
+   b) No — build it, explain at the end
+
+4. Fetch latest docs from code.claude.com during lessons?
+   a) Yes
+   b) No — offline is fine
+
+Example answer: 1b, 2a, 3a, 4a
+```
 
 **Wait for their answer. Do not clone, fetch, or explore anything until they respond.**
 
