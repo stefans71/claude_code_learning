@@ -8,25 +8,36 @@
 
 ## 1. Ask about their experience (do this FIRST — before any other action)
 
+Present all questions together so the user can answer in one message.
 Say exactly this:
 
-> Welcome to claude-code-learn! Before I set things up, a quick question:
+> Welcome to claude-code-learn! A few questions before I set things up:
 >
-> What's your experience with Claude Code?
+> 1. What's your experience with Claude Code?
+>    a) Never used it
+>    b) Used it casually
+>    c) Power user
 >
-> 1. **Never used it** — I'll explain everything as I go
-> 2. **Used it casually** — I'll focus on the features you haven't seen
-> 3. **Power user** — I'll skip the basics and go deep
+> 2. Have you configured any of these before?
+>    CLAUDE.md, custom skills, hooks, agents, or MCP servers
+>    a) None of these
+>    b) Some of these (tell me which)
+>    c) All of these
+>
+> 3. Want me to explain what I'm building as I go?
+>    a) Yes — narrate as you build
+>    b) No — build it, explain at the end
+>
+> 4. Fetch latest docs from code.claude.com during lessons?
+>    a) Yes
+>    b) No — offline is fine
+>
+> Example answer: **1b, 2a, 3a, 4a**
 
 **Wait for their answer. Do not clone, fetch, or explore anything until they respond.**
 
-Then ask:
-
-> Have you configured any of these before: CLAUDE.md, custom skills, hooks, agents, MCP servers?
-
-Then ask:
-
-> During lessons, I can fetch the latest Anthropic docs from code.claude.com to make sure everything is current. This uses internet access. Fine to skip — lessons still work without it. Want me to fetch docs during lessons?
+**Level mapping:**
+- 1a → beginner, 1b → intermediate, 1c → advanced
 
 ## 2. Clone the repo (one command)
 
@@ -48,10 +59,17 @@ Read `CLAUDE.md` from the clone you just created (not from GitHub).
 
 Then create the learning environment using the answers from step 1. Follow the setup skill instructions at `.claude/skills/setup/SKILL.md` — but **skip the interview questions** since you already asked them in step 1. Jump straight to the "What you build" section.
 
-**Level mapping from step 1:**
-- "Never used it" → beginner
-- "Used it casually" → intermediate
-- "Power user" → advanced
+Use the level mapping from step 1 (1a → beginner, 1b → intermediate, 1c → advanced).
+Use Q3 for narration preference, Q4 for fetch_docs preference.
+
+**Permissions note:** When you create files in `.claude/`, the user may see a
+permissions prompt asking to allow access to `.claude/`. Before creating any
+files, tell the user:
+
+> You'll see a permissions prompt for the .claude/ directory. Select
+> **"Yes, and always allow access to .claude/ from this project"** —
+> this tutorial creates settings, hooks, and agents there throughout
+> the lessons.
 
 Create these files based on level:
 - `.claude/settings.json` (everyone)
