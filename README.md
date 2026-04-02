@@ -6,7 +6,7 @@
 ![Claude Code](https://img.shields.io/badge/Claude_Code-required-orange?style=for-the-badge)
 ![Lessons](https://img.shields.io/badge/Lessons-7-green?style=for-the-badge)
 ![Zero Code](https://img.shields.io/badge/Zero_Code-All_Markdown-purple?style=for-the-badge)
-![GitHub stars](https://img.shields.io/github/stars/stefans71/Claude_Code_Learning?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/stefans71/claude_code_learning?style=for-the-badge)
 
 <br>
 
@@ -113,7 +113,7 @@ You need Claude Code. That's it.
 Open Claude Code and say:
 
 ```
-Set up claude-code-learn: https://github.com/stefans71/Claude_Code_Learning/blob/main/docs/INSTALL.md
+Set up claude-code-learn: https://github.com/stefans71/claude_code_learning/blob/main/docs/INSTALL.md
 ```
 
 Claude reads the install instructions and walks you through everything:
@@ -252,9 +252,9 @@ No installation scripts. No configuration sprawl. No code that runs before you t
 <p align="center">
   <b>Like this? Give it a ⭐ on GitHub</b>
   <br><br>
-  <a href="https://github.com/stefans71/Claude_Code_Learning/issues">Report an Issue</a>
+  <a href="https://github.com/stefans71/claude_code_learning/issues">Report an Issue</a>
   ·
-  <a href="https://github.com/stefans71/Claude_Code_Learning/discussions">Discussions</a>
+  <a href="https://github.com/stefans71/claude_code_learning/discussions">Discussions</a>
 </p>
 
 <p align="center">

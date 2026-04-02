@@ -49,13 +49,13 @@ Example answer: 1b, 2a, 3a, 4a
 Clone into the user's current working directory or a sensible default:
 
 ```bash
-git clone https://github.com/stefans71/Claude_Code_Learning.git
+git clone https://github.com/stefans71/claude_code_learning.git
 ```
 
 Then `cd` into the clone:
 
 ```bash
-cd Claude_Code_Learning
+cd claude_code_learning
 ```
 
 ## 3. Read CLAUDE.md and run setup from their answers
