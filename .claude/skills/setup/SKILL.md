@@ -78,12 +78,12 @@ show a lesson picker so they can skip basics they already know:**
 All 7 lessons are available. The first 4 cover fundamentals.
 Want to skip any?
 
-a) [X] 01-CLAUDE-md — project instructions that shape Claude's behavior
-b) [X] 02-settings — permissions, model config, settings.json
-c) [X] 03-skills — slash commands you can build yourself
-d) [X] 04-hooks — automated actions on every edit
+a) [ ] 01-CLAUDE-md — project instructions that shape Claude's behavior
+b) [ ] 02-settings — permissions, model config, settings.json
+c) [ ] 03-skills — slash commands you can build yourself
+d) [ ] 04-hooks — automated actions on every edit
 
-Type the letters to UNCHECK (e.g. "a c" to skip those two),
+Type letters to skip (e.g. "a c" marks them [X]),
 or type "all" to skip all basics, or "none" to keep them all.
 ```
 
