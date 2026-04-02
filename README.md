@@ -18,7 +18,7 @@
 
 <br>
 
-*Clone it. Open Claude Code. Type `/setup`. Claude interviews you, builds your environment, and starts teaching.*
+*You need Claude Code. That's it. Open Claude Code and paste one line. Claude handles everything.*
 
 <br>
 
@@ -55,11 +55,11 @@ You don't read about CLAUDE.md — you open this repo's CLAUDE.md and see it sha
 
 ```mermaid
 graph TD
-    A["You type /setup"] --> B["Claude interviews you"]
-    B --> C["Detects your experience level"]
+    A["You paste one line into Claude Code"] --> B["Claude clones the repo"]
+    B --> C["Claude interviews you about your experience"]
     C --> D["Builds your learning environment"]
     D --> E["settings.json · hooks · progress tracker"]
-    E --> F["You type /lesson 01-CLAUDE-md"]
+    E --> F["/lesson 01-CLAUDE-md starts automatically"]
     F --> G["USE — experience the feature live"]
     G --> H["DEMONSTRATE — walk through the real config"]
     H --> I["APPLY — build your own"]
@@ -108,16 +108,67 @@ Each lesson takes 15–30 minutes. Do them in order — each builds on the last.
 
 ## <img src="assets/svg/heading-get-started.svg" alt="Get Started" height="28">
 
-```bash
-git clone https://github.com/stefans71/Claude_Code_Learning.git
-cd Claude_Code_Learning
+You need Claude Code. That's it.
+
+Open Claude Code and say:
+
+```
+Set up claude-code-learn: https://github.com/stefans71/Claude_Code_Learning/blob/main/docs/INSTALL.md
 ```
 
-Open it in VS Code with the [Claude Code extension](https://marketplace.visualstudio.com/items?itemName=anthropics.claude-code) (recommended), or run `claude` from the terminal.
+Claude reads the install instructions and walks you through everything:
 
-Claude detects it's a fresh clone and starts the setup interview automatically. If it doesn't, type `/setup`.
+| What happens | Details |
+|--------------|---------|
+| Claude clones the repo | You never run `git clone` yourself |
+| Interviews you | Detects your experience level |
+| Builds your environment | Settings, hooks, progress tracker, agents |
+| Starts teaching | First lesson begins automatically |
 
-Claude takes it from there.
+If setup gets interrupted, run `/setup` again — it detects previous progress and fills the gaps.
+
+<br>
+
+### New to Claude Code?
+
+<details>
+<summary><b>Install Claude Code first (click to expand)</b></summary>
+
+<br>
+
+**Option A: VS Code extension (recommended for this course)**
+
+1. Install [VS Code](https://code.visualstudio.com/) if you don't have it
+2. Install the [Claude Code extension](https://marketplace.visualstudio.com/items?itemName=anthropics.claude-code)
+3. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and type "Claude Code: Open in New Tab"
+4. Sign in when prompted
+
+**Option B: Terminal CLI**
+
+| Platform | Command |
+|----------|---------|
+| macOS / Linux | `curl -fsSL https://claude.ai/install.sh \| bash` |
+| Windows (PowerShell) | `irm https://claude.ai/install.ps1 \| iex` |
+| Homebrew | `brew install --cask claude-code` |
+| WinGet | `winget install Anthropic.ClaudeCode` |
+
+Then run `claude` in your terminal.
+
+**Claude Code access — pick one:**
+
+| Option | Cost | Best for |
+|--------|------|----------|
+| Claude Max subscription | $100–200/mo | Best experience — recommended for learning |
+| Claude Pro subscription | $20/mo | Budget option, may hit usage limits |
+| Anthropic API key | Pay-per-use | Developers, scripting |
+
+> **Tip:** API key sessions lose context after ~10 minutes of inactivity. For a tutorial where you pause to think and read, a Claude subscription gives the best experience.
+
+**No other dependencies.** Git is the only tool Claude needs, and most systems have it. Node.js is only needed for lesson 06 (MCP) — Claude will tell you when you get there.
+
+See [Anthropic's official setup guide](https://code.claude.com/docs/en/overview) for full details.
+
+</details>
 
 <br>
 
@@ -126,6 +177,8 @@ Claude takes it from there.
 <br>
 
 ## <img src="assets/svg/heading-commands.svg" alt="Commands" height="28">
+
+Once set up, these commands are available:
 
 | Command | What it does |
 |---------|-------------|
@@ -148,22 +201,9 @@ Plain language always works too. Slash commands are shortcuts.
 
 | Requirement | Details |
 |-------------|---------|
-| **[Claude Code](https://claude.ai/code)** | Required — `claude --version` to verify |
-| **Git** | To clone this repo |
+| **[Claude Code](https://claude.ai/code)** | Required — see [install instructions](#new-to-claude-code) above |
+| **Git** | Most systems have it — Claude will tell you if it's missing |
 | **Node.js 18+** | Only for lesson 06 (MCP) — optional otherwise |
-
-**Claude Code access — pick one:**
-
-| Option | Cost | Best for |
-|--------|------|----------|
-| Claude Max subscription | $100–200/mo | Best experience — recommended for learning |
-| Claude Pro subscription | $20/mo | Budget option, may hit usage limits |
-| Anthropic API key | Pay-per-use | Developers, scripting |
-| OpenRouter | Pay-per-use | Multi-model access, budget flexibility |
-
-> **Tip:** API key and OpenRouter sessions lose context after ~10 minutes of inactivity. For a tutorial where you pause to think and read, a Claude subscription gives the best experience.
-
-**Recommended editor:** VS Code with the Claude Code extension — chat panel on the right, editor on the left. But any of these work: VS Code terminal, JetBrains, Windsurf, Cursor, or plain terminal.
 
 <br>
 
