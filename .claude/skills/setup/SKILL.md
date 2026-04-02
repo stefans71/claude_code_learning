@@ -126,15 +126,19 @@ Wait for their answers. Then map them:
    }
    ```
 
-3. Add to .gitignore (create if needed):
+3. Check .gitignore has these entries (add any that are missing):
    ```
-   .claude/settings.json
    .claude/settings.local.json
    .claude/agents/
    .claude-progress.json
    CLAUDE.local.md
    .mcp.json
    ```
+   **When narrating:** explain that the gitignore keeps your personal
+   settings and progress files from being published to git. These files
+   are created just for you — they shouldn't be committed to the repo.
+   Note: .claude/settings.json is NOT gitignored because it ships with
+   the repo and contains shared permissions and hooks.
 
 ### For intermediate and advanced:
 
