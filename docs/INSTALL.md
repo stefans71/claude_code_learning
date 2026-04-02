@@ -21,17 +21,17 @@ Welcome to claude-code-learn! A few questions before I set things up:
    a) Never used it
    b) Used it casually
    c) Power user
-
+---
 2. Have you configured any of these before?
    CLAUDE.md, custom skills, hooks, agents, or MCP servers
    a) None of these
    b) Some of these (tell me which)
    c) All of these
-
+---
 3. Want me to explain what I'm building as I go?
    a) Yes — narrate as you build
    b) No — build it, explain at the end
-
+---
 4. Fetch latest docs from code.claude.com during lessons?
    a) Yes
    b) No — offline is fine
