@@ -6,43 +6,40 @@
 - Do NOT spawn agents to read skill files
 - Just follow the steps below, in order
 
-## 1. Ask about their experience (do this FIRST — before any other action)
+## 1. Lesson picker (do this FIRST — before any other action)
 
-**CRITICAL: Present these as a wizard-style Q&A — one question at a time
-with lettered choices. Use Claude Code's multi-step input format so the
-user gets an interactive form experience, not a wall of text.**
+**Present as a wizard-style Q&A. Use Claude Code's multi-step input format
+so the user gets an interactive form experience.**
 
-Ask these questions as a wizard (one step per question, lettered options):
+**The lesson picker IS the assessment.** No separate experience questions.
 
 ```
-Welcome to claude-code-learn! A few questions before I set things up:
+Welcome to claude-code-learn! 7 lessons, starting with 4 fundamentals.
 
-1. What's your experience with Claude Code?
-   a) Never used it
-   b) Used it casually
-   c) Power user
----
-2. Have you configured any of these before?
-   CLAUDE.md, custom skills, hooks, agents, or MCP servers
-   a) None of these
-   b) Some of these (tell me which)
-   c) All of these
----
-3. Want me to explain what I'm building as I go?
-   a) Yes — narrate as you build
-   b) No — build it, explain at the end
----
-4. Fetch latest docs from code.claude.com during lessons?
-   a) Yes
-   b) No — offline is fine
+Which basics do you want to skip?
 
-Example answer: 1b, 2a, 3a, 4a
+a) [ ] 01-CLAUDE-md — project instructions that shape Claude's behavior
+b) [ ] 02-settings — permissions, model config, settings.json
+c) [ ] 03-skills — slash commands you can build yourself
+d) [ ] 04-hooks — automated actions on every edit
+
+Type letters to skip (e.g. "a c" marks them [X]),
+or "all" to skip all basics, or "none" to keep them all.
 ```
 
 **Wait for their answer. Do not clone, fetch, or explore anything until they respond.**
 
-**Level mapping:**
-- 1a → beginner, 1b → intermediate, 1c → advanced
+Then ask one follow-up:
+
+```
+Fetch latest docs from code.claude.com during lessons?
+
+a) Yes
+b) No — offline is fine
+```
+
+**Level mapping (derived from skips):**
+- Skipped 0 → beginner, Skipped 1-3 → intermediate, Skipped all → advanced
 
 ## 2. Clone the repo (one command)
 
@@ -62,10 +59,12 @@ cd claude_code_learning
 
 Read `CLAUDE.md` from the clone you just created (not from GitHub).
 
-Then create the learning environment using the answers from step 1. Follow the setup skill instructions at `.claude/skills/setup/SKILL.md` — but **skip the interview questions** since you already asked them in step 1. Jump straight to the "What you build" section.
+Then create the learning environment using the answers from step 1. Follow the setup skill instructions at `.claude/skills/setup/SKILL.md` — but **skip the interview** since you already asked in step 1. Jump straight to the "What you build" section.
 
-Use the level mapping from step 1 (1a → beginner, 1b → intermediate, 1c → advanced).
-Use Q3 for narration preference, Q4 for fetch_docs preference.
+Use the level mapping from step 1:
+- Skipped 0 basics → beginner (narrate everything)
+- Skipped 1-3 → intermediate (narrate builds, lighter explanations)
+- Skipped all 4 → advanced (build quietly, minimal explanation)
 
 **Permissions note:** The repo ships with `.claude/settings.json` containing
 pre-approved write permissions for setup paths. File writes should NOT prompt

@@ -33,50 +33,16 @@ This means **running /setup again after an interruption always works.**
 
 ## The interview
 
-Present all questions together so the learner can answer in one message.
-Present as a wizard-style Q&A — one question at a time with lettered
-choices. Use Claude Code's multi-step input format so the user gets an
-interactive form experience. Use lettered options for quick typing.
-Format like this:
+Present as a wizard-style Q&A. Use Claude Code's multi-step input
+format so the user gets an interactive form experience.
+
+**The lesson picker IS the assessment.** No separate experience questions.
+How many basics they skip tells you their level.
 
 ```
-A few questions before I set things up:
+Welcome to claude-code-learn! 7 lessons, starting with 4 fundamentals.
 
-1. What's your experience with Claude Code?
-   a) Never used it
-   b) Used it casually
-   c) Power user
-
-2. Have you configured any of these before?
-   CLAUDE.md, custom skills, hooks, agents, or MCP servers
-   a) None of these
-   b) Some of these (tell me which)
-   c) All of these
-
-3. Want me to explain what I'm building as I go?
-   a) Yes — narrate as you build
-   b) No — build it, explain at the end
-
-4. Fetch latest docs from code.claude.com during lessons?
-   a) Yes
-   b) No — offline is fine
-
-Example answer: 1b, 2a, 3a, 4a
-```
-
-Wait for their answers. Then map them:
-
-- Q1: a → beginner, b → intermediate, c → advanced
-- Q2: Their answer tells you which concepts to explain more carefully
-- Q3: a → narrate every file creation as a mini-lesson,
-      b → build quietly, explain at the end
-
-**After the main questions, if Q1 is b or c (intermediate/advanced),
-show a lesson picker so they can skip basics they already know:**
-
-```
-All 7 lessons are available. The first 4 cover fundamentals.
-Want to skip any?
+Which basics do you want to skip?
 
 a) [ ] 01-CLAUDE-md — project instructions that shape Claude's behavior
 b) [ ] 02-settings — permissions, model config, settings.json
@@ -84,16 +50,26 @@ c) [ ] 03-skills — slash commands you can build yourself
 d) [ ] 04-hooks — automated actions on every edit
 
 Type letters to skip (e.g. "a c" marks them [X]),
-or type "all" to skip all basics, or "none" to keep them all.
+or "all" to skip all basics, or "none" to keep them all.
 ```
 
-Save their choices in .claude-progress.json under "skipped": [...].
-Beginners (Q1=a) skip this step — they get all lessons.
-- Q4: a → note preference in .claude-progress.json ("fetch_docs": true).
-      Lessons will fetch docs automatically — no further prompts.
-      b → note preference ("fetch_docs": false). Lessons use training
-      knowledge + reference links. You can change this later by editing
-      .claude-progress.json.
+Wait for their answer. Then derive their level from their choices:
+- Skipped 0 → beginner (narrate everything, explain all concepts)
+- Skipped 1-3 → intermediate (narrate builds, lighter explanations)
+- Skipped all 4 → advanced (build quietly, minimal explanation)
+
+Save skipped lessons in .claude-progress.json under "skipped": [...].
+
+Then ask one follow-up:
+
+```
+One more thing — fetch latest docs from code.claude.com during lessons?
+
+a) Yes
+b) No — offline is fine
+```
+
+Save as "fetch_docs": true/false in .claude-progress.json.
 
 ## What you build
 
