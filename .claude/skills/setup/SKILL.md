@@ -191,22 +191,29 @@ Tell the learner:
 - That everything you just did IS lessons 02-05
 - That the hooks are already active — they'll see explanations before every action
 
-Then do the **hook verification step**:
-"Let's verify the hooks are working. Ask me to create a file — just say
-'create a file called test.md with hello world'. Watch for the explanation
-before I write it — that's the hook firing."
+Then present the next step as lettered options:
 
-Wait for them to try it. Confirm the PreToolUse hook fired (it explains
-the Write action before performing it). Then clean up: delete test.md.
+```
+What next?
 
-Then give the **next step with slash-command bridge**:
-"Type `/lesson 01-CLAUDE-md` to start your first lesson. That `/` is a slash command —
-you'll learn how they work in lesson 03. For now, just know that anything
-starting with `/` triggers a skill in this repo."
+a) Verify hooks — I'll create a test file so you can watch the hooks fire
+b) Start lesson 01 — jump straight into /lesson 01-CLAUDE-md
+c) See all commands — type "/" in the prompt to browse available skills
 
-Also mention:
-- Type `/progress` at any time to see your learning path
-- If you ever get lost, type `/explain` to understand what just happened
+Tip: Type "/" in the prompt area at any time to see all commands.
+Other useful ones: /progress (your learning path), /explain (what just happened).
+```
+
+Wait for their answer.
+
+- a → Do the hook verification: create test.md with "hello world", confirm
+  the PreToolUse hook fired (it explains the Write action before performing
+  it), then clean up by deleting test.md. After verification, say:
+  "Hooks are working. Type `/lesson 01-CLAUDE-md` to start."
+- b → Tell them: "Type `/lesson 01-CLAUDE-md` to start. That `/` is a slash
+  command — you'll learn how they work in lesson 03."
+- c → List all available slash commands from the repo, then ask if they
+  want to start lesson 01.
 
 ## Rules
 - Do NOT use shell injection (!backtick syntax)
