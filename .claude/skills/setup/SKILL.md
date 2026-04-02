@@ -34,7 +34,10 @@ This means **running /setup again after an interruption always works.**
 ## The interview
 
 Present all questions together so the learner can answer in one message.
-Use lettered options for quick typing. Format like this:
+Present as a wizard-style Q&A — one question at a time with lettered
+choices. Use Claude Code's multi-step input format so the user gets an
+interactive form experience. Use lettered options for quick typing.
+Format like this:
 
 ```
 A few questions before I set things up:

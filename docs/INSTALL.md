@@ -8,11 +8,11 @@
 
 ## 1. Ask about their experience (do this FIRST — before any other action)
 
-**CRITICAL: Copy-paste the text block below VERBATIM. Do NOT rephrase,
-summarize, or rewrite it in your own words. The lettered options and
-formatting are intentional — they let the user answer in one short message.**
+**CRITICAL: Present these as a wizard-style Q&A — one question at a time
+with lettered choices. Use Claude Code's multi-step input format so the
+user gets an interactive form experience, not a wall of text.**
 
-Print this EXACTLY (copy-paste, do not rephrase):
+Ask these questions as a wizard (one step per question, lettered options):
 
 ```
 Welcome to claude-code-learn! A few questions before I set things up:
