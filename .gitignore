@@ -1,0 +1,14 @@
+# Created by /setup — personalized, not committed
+.claude/settings.json
+.claude/settings.local.json
+.claude/agents/
+.claude-progress.json
+CLAUDE.local.md
+.mcp.json
+
+# Lesson 07 practice project
+practice-project/
+
+# OS
+.DS_Store
+Thumbs.db
