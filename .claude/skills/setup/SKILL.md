@@ -196,12 +196,11 @@ Then present the next step as lettered options:
 ```
 What next?
 
-a) Verify hooks — I'll create a test file so you can watch the hooks fire
-b) Start lesson 01 — jump straight into /lesson 01-CLAUDE-md
-c) See all commands — type "/" in the prompt to browse available skills
+a) Quick test — I'll create a file so you can see your new setup in action
+b) Start learning — jump straight into the first lesson
+c) See all commands — type "/" in the prompt to browse what's available
 
 Tip: Type "/" in the prompt area at any time to see all commands.
-Other useful ones: /progress (your learning path), /explain (what just happened).
 ```
 
 Wait for their answer.
