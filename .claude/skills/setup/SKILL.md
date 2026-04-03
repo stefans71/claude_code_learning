@@ -42,34 +42,27 @@ How many basics they skip tells you their level.
 ```
 Welcome to claude-code-learn! 7 lessons, starting with 4 fundamentals.
 
-Which basics do you want to skip?
+Which fundamentals do you want to learn?
 
-a) [ ] 01-CLAUDE-md — project instructions that shape Claude's behavior
-b) [ ] 02-settings — permissions, model config, settings.json
-c) [ ] 03-skills — slash commands you can build yourself
-d) [ ] 04-hooks — automated actions on every edit
+a) CLAUDE.md — project instructions that shape Claude
+b) Settings — permissions, model config
+c) Skills — slash commands you can build
+d) Hooks — automated actions on events
 
-Type letters to skip (e.g. "a c" marks them [X]),
-or "all" to skip all basics, or "none" to keep them all.
+Type "all", letter(s) to pick specific ones, or "skip" to skip all.
 ```
 
-Wait for their answer. Then derive their level from their choices:
-- Skipped 0 → beginner (narrate everything, explain all concepts)
-- Skipped 1-3 → intermediate (narrate builds, lighter explanations)
-- Skipped all 4 → advanced (build quietly, minimal explanation)
+**This is the ONLY question.** Do NOT ask about docs, narration, or
+experience separately. Default fetch_docs to true. Derive everything
+else from their answer:
 
-Save skipped lessons in .claude-progress.json under "skipped": [...].
+- "all" or "a b c d" → beginner (narrate everything, explain all concepts)
+- 1-3 letters → intermediate (narrate builds, lighter explanations)
+- "skip" → advanced (build quietly, minimal explanation)
 
-Then ask one follow-up:
-
-```
-One more thing — fetch latest docs from code.claude.com during lessons?
-
-a) Yes
-b) No — offline is fine
-```
-
-Save as "fetch_docs": true/false in .claude-progress.json.
+Save in .claude-progress.json:
+- "skipped": [...] (lessons they didn't pick)
+- "fetch_docs": true (always default to true)
 
 ## What you build
 

@@ -16,27 +16,19 @@ so the user gets an interactive form experience.**
 ```
 Welcome to claude-code-learn! 7 lessons, starting with 4 fundamentals.
 
-Which basics do you want to skip?
+Which fundamentals do you want to learn?
 
-a) [ ] 01-CLAUDE-md — project instructions that shape Claude's behavior
-b) [ ] 02-settings — permissions, model config, settings.json
-c) [ ] 03-skills — slash commands you can build yourself
-d) [ ] 04-hooks — automated actions on every edit
+a) CLAUDE.md — project instructions that shape Claude
+b) Settings — permissions, model config
+c) Skills — slash commands you can build
+d) Hooks — automated actions on events
 
-Type letters to skip (e.g. "a c" marks them [X]),
-or "all" to skip all basics, or "none" to keep them all.
+Type "all", letter(s) to pick specific ones, or "skip" to skip all.
 ```
 
-**Wait for their answer. Do not clone, fetch, or explore anything until they respond.**
-
-Then ask one follow-up:
-
-```
-Fetch latest docs from code.claude.com during lessons?
-
-a) Yes
-b) No — offline is fine
-```
+**Wait for their answer. Do not clone, fetch, or explore anything until they respond.
+This is the ONLY question. Do NOT ask about docs, narration, or experience
+separately. Default fetch_docs to true and narration based on level.**
 
 **Level mapping (derived from skips):**
 - Skipped 0 → beginner, Skipped 1-3 → intermediate, Skipped all → advanced
