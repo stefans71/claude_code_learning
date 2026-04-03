@@ -40,25 +40,38 @@ format so the user gets an interactive form experience.
 How many basics they skip tells you their level.
 
 ```
-Welcome to claude-code-learn! 7 lessons, starting with 4 fundamentals.
+Welcome to claude-code-learn! 7 lessons in 2 chapters.
 
-Which fundamentals do you want to learn?
+Chapter 1 — Fundamentals:
 
 a) CLAUDE.md — project instructions that shape Claude
 b) Settings — permissions, model config
 c) Skills — slash commands you can build
 d) Hooks — automated actions on events
 
-Type "all", letter(s) to pick specific ones, or "skip" to skip all.
+Type "all", letter(s) to pick, or "skip" to skip all.
 ```
 
-**This is the ONLY question.** Do NOT ask about docs, narration, or
-experience separately. Default fetch_docs to true. Derive everything
-else from their answer:
+Wait for their answer. Then **immediately show Chapter 2** using the
+same pattern:
 
-- "all" or "a b c d" → beginner (narrate everything, explain all concepts)
-- 1-3 letters → intermediate (narrate builds, lighter explanations)
-- "skip" → advanced (build quietly, minimal explanation)
+```
+Chapter 2 — Advanced:
+
+e) Agents — subagents and parallel work
+f) MCP — Model Context Protocol
+g) Putting it together — capstone: combine everything
+
+Type "all", letter(s) to pick, or "skip".
+```
+
+**These are the ONLY questions.** Do NOT ask about docs, narration, or
+experience separately. Default fetch_docs to true. Derive level from
+total skipped across both chapters:
+
+- Skipped 0 → beginner (narrate everything, explain all concepts)
+- Skipped 1-5 → intermediate (narrate builds, lighter explanations)
+- Skipped 6-7 → advanced (build quietly, minimal explanation)
 
 Save in .claude-progress.json:
 - "skipped": [...] (lessons they didn't pick)

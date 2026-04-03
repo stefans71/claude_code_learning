@@ -14,24 +14,36 @@ so the user gets an interactive form experience.**
 **The lesson picker IS the assessment.** No separate experience questions.
 
 ```
-Welcome to claude-code-learn! 7 lessons, starting with 4 fundamentals.
+Welcome to claude-code-learn! 7 lessons in 2 chapters.
 
-Which fundamentals do you want to learn?
+Chapter 1 — Fundamentals:
 
 a) CLAUDE.md — project instructions that shape Claude
 b) Settings — permissions, model config
 c) Skills — slash commands you can build
 d) Hooks — automated actions on events
 
-Type "all", letter(s) to pick specific ones, or "skip" to skip all.
+Type "all", letter(s) to pick, or "skip" to skip all.
 ```
 
-**Wait for their answer. Do not clone, fetch, or explore anything until they respond.
-This is the ONLY question. Do NOT ask about docs, narration, or experience
-separately. Default fetch_docs to true and narration based on level.**
+**Wait for their answer. Then immediately show Chapter 2:**
 
-**Level mapping (derived from skips):**
-- Skipped 0 → beginner, Skipped 1-3 → intermediate, Skipped all → advanced
+```
+Chapter 2 — Advanced:
+
+e) Agents — subagents and parallel work
+f) MCP — Model Context Protocol
+g) Putting it together — capstone: combine everything
+
+Type "all", letter(s) to pick, or "skip".
+```
+
+**Do not clone, fetch, or explore anything until both chapters are answered.
+Do NOT ask about docs, narration, or experience separately.
+Default fetch_docs to true and narration based on level.**
+
+**Level mapping (derived from total skips across both chapters):**
+- Skipped 0 → beginner, Skipped 1-5 → intermediate, Skipped 6-7 → advanced
 
 ## 2. Clone the repo (one command)
 

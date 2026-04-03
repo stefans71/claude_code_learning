@@ -18,18 +18,23 @@ Teach the requested Claude Code feature following the lesson framework.
    this menu with the next uncompleted lesson highlighted:
 
    ```
-   Which lesson?
+   Chapter 1 — Fundamentals:
+   a) 01-CLAUDE-md — project instructions that shape Claude
+   b) 02-settings — permissions, model config
+   c) 03-skills — slash commands you can build
+   d) 04-hooks — automated actions on events
 
-   a) 01-CLAUDE-md — how project instructions shape Claude's behavior
-   b) 02-settings — settings.json, permissions, model config
-   c) 03-skills — slash commands and SKILL.md
-   d) 04-hooks — event-driven automation
+   Chapter 2 — Advanced:
    e) 05-agents — subagents and parallel work
    f) 06-mcp — Model Context Protocol
    g) 07-putting-it-together — capstone: combine everything
 
-   → Suggested next: [next uncompleted lesson]
+   → Next: [next uncompleted lesson]
    ```
+
+   Check .claude-progress.json for "skipped" and "completed" lessons.
+   Mark completed with [done], skipped with [skipped]. Users can still
+   pick a skipped lesson if they change their mind.
 
    Wait for their answer before proceeding.
 
